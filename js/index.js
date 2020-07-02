@@ -35,7 +35,7 @@ var aniheight;
 
 var base = new Image();
 
-base.src = "smoothmain.png";
+base.src = "main3.png";
 
 function test() {
   console.log("steady");
@@ -47,7 +47,7 @@ function test() {
   }
   console.log(type);
 
-  windowWidth = 412 * 2;
+  windowWidth = 836.2;
   windowHeight = window.innerHeight;
   pixelRatio = window.devicePixelRatio || 1; /// get pixel ratio of device
 
@@ -66,14 +66,14 @@ function draw() {
 
   ctx.drawImage(base, 0, 0);
 
-  if (hide.offsetHeight === 96) {
+  if (hide.offsetHeight === 99) {
     type = Math.floor(Math.random() * 5) + 1;
     typeTest()
   }
 
-  ctx.font = "lighter 56px Roboto";
+  ctx.font = "lighter 65px Roboto";
   ctx.textAlign = "center";
-  ctx.fillText(basic, 540, 737);
+  ctx.fillText(basic, 540, 568);
 
 
   requestAnimationFrame(draw, 10);
@@ -81,7 +81,7 @@ function draw() {
 
 function typeTest() {
   if (type === 1) {
-    basic = canvas.height;
+    basic = pixelRatio;
   }
   if (type === 2) {
     basic = "Garden";

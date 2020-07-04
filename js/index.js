@@ -65,6 +65,10 @@ function test() {
     squi1 = Number(localStorage.squi1ls);
   } else {
     type = Math.floor(Math.random() * 5) + 1;
+    pika1 = 0;
+    bulb1 = 0;
+    char1 = 0;
+    squi1 = 0;
   }
   console.log(type);
 
@@ -102,7 +106,7 @@ function draw() {
 
   if (document.getElementById('done').offsetHeight === 26 && downtest === false) {
     document.getElementById('done').style.height = 0 + "px";
-    document.getElementById('change').style.top = 732 + "px";
+    document.getElementById('change').style.top = 800 + "px";
     document.getElementById('showdone').style.top = 174.7 + "px";
   }
 

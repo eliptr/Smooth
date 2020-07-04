@@ -18,14 +18,14 @@ canvas {
 .change {
   position: absolute;
   left: 332px;
-  top: 732px;
+  top: 800px;
   width: 69px;
   height: 68px;
   border-radius: 50px;
   background-color: rgba(255, 0, 0, 0);
   box-shadow: none;
   border: none;
-  outline: none;
+  /* outline: none; */
 }
 
 .ani {

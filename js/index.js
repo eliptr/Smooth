@@ -19,6 +19,10 @@ function onDeviceReady() {
 function onPause() {
   console.log("stop...wait a minute");
   localStorage.typels = type;
+  localStorage.pika1ls = pika1;
+  localStorage.bulb1ls = bulb1;
+  localStorage.char1ls = char1;
+  localStorage.squi1ls = squi1;
 }
 
 function onResume() {
@@ -41,15 +45,24 @@ var aniheight;
 
 var downtest;
 
+var pika1 = 0;
+var bulb1 = 0;
+var char1 = 0;
+var squi1 = 0;
+
 var base = new Image();
 
-base.src = "main3.png";
+base.src = "main4.png";
 
 function test() {
   console.log("steady");
 
   if (localStorage.typels) {
     type = Number(localStorage.typels);
+    pika1 = Number(localStorage.pika1ls);
+    bulb1 = Number(localStorage.bulb1ls);
+    char1 = Number(localStorage.char1ls);
+    squi1 = Number(localStorage.squi1ls);
   } else {
     type = Math.floor(Math.random() * 5) + 1;
   }
@@ -72,7 +85,7 @@ function draw() {
   canvas.style.width = windowWidth + 'px';   /// CSS size of canvas
   canvas.style.height = windowHeight + 'px';
 
-  
+
 
   ctx.drawImage(base, 0, 0);
 
@@ -102,6 +115,14 @@ function draw() {
   ctx.fillStyle = "#2B2B28";
   ctx.textAlign = "center";
   ctx.fillText(work, 540, 632);
+
+  ctx.font = "lighter 53px Roboto";
+  ctx.fillStyle = "#E3B04B";
+  ctx.textAlign = "center";
+  ctx.fillText(pika1, 1583, 360);
+  ctx.fillText(bulb1, 1583, 478);
+  ctx.fillText(char1, 1583, 606);
+  ctx.fillText(squi1, 1583, 736);
 
 
   requestAnimationFrame(draw, 10);
@@ -159,6 +180,22 @@ function downupbt() {
   document.querySelector('.done').classList.remove('donedownclass');
   document.querySelector('.done').offsetWidth = document.querySelector('.done').offsetWidth;
   document.querySelector('.done').classList.add('doneupclass');
+
+  if (type === 1) {
+    pika1 += 1;
+  }
+  if (type === 2) {
+    bulb1 += 1;
+  }
+  if (type === 3) {
+    char1 += 1;
+  }
+  if (type === 4) {
+    squi1 += 1;
+  }
+  if (type === 5) {
+    work = "pie";
+  }
 }
 
 // document.getElementById('change').addEventListener('click', function () {

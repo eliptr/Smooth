@@ -17,3 +17,16 @@
 [0704/191148.134:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
 [0704/191148.135:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Η διοχέτευση έχει τερματιστεί. (0x6D)
 [0704/191148.138:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/220551.065:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/220551.066:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0704/220551.067:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Η διοχέτευση έχει τερματιστεί. (0x6D)
+[0704/220551.068:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/220706.372:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/220706.378:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Η διοχέτευση έχει τερματιστεί. (0x6D)
+[0704/220706.379:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/221254.761:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/221254.766:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Η διοχέτευση έχει τερματιστεί. (0x6D)
+[0704/221254.767:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/221325.545:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)
+[0704/221325.551:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Η διοχέτευση έχει τερματιστεί. (0x6D)
+[0704/221325.553:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Δεν επιτρέπεται η πρόσβαση. (0x5)

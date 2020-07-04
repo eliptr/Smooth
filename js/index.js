@@ -45,10 +45,10 @@ var aniheight;
 
 var downtest;
 
-var pika1 = 0;
-var bulb1 = 0;
-var char1 = 0;
-var squi1 = 0;
+var pika1;
+var bulb1;
+var char1;
+var squi1;
 
 var base = new Image();
 
@@ -59,18 +59,21 @@ function test() {
 
   if (localStorage.typels) {
     type = Number(localStorage.typels);
+  } else {
+    type = Math.floor(Math.random() * 5) + 1;
+  }
+  console.log(type);
+  if (localStorage.pika1ls) {
     pika1 = Number(localStorage.pika1ls);
     bulb1 = Number(localStorage.bulb1ls);
     char1 = Number(localStorage.char1ls);
     squi1 = Number(localStorage.squi1ls);
   } else {
-    type = Math.floor(Math.random() * 5) + 1;
     pika1 = 0;
     bulb1 = 0;
     char1 = 0;
     squi1 = 0;
   }
-  console.log(type);
 
   windowWidth = 836.2;
   windowHeight = window.innerHeight;
@@ -186,7 +189,7 @@ function downupbt() {
   document.querySelector('.done').classList.add('doneupclass');
 
   if (type === 1) {
-    pika1 += 1;
+    pika1 = pika1 + 1;
   }
   if (type === 2) {
     bulb1 += 1;

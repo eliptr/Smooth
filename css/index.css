@@ -17,10 +17,10 @@ canvas {
 
 .change {
   position: absolute;
-  left: 330px;
-  top: 696px;
-  width: 58px;
-  height: 58px;
+  left: 332px;
+  top: 732px;
+  width: 69px;
+  height: 68px;
   border-radius: 50px;
   background-color: rgba(255, 0, 0, 0);
   box-shadow: none;
@@ -42,6 +42,7 @@ canvas {
   outline: none;
   transform: rotatex(180deg);
   transform-origin: top;
+  text-align: center;
 }
 
 @keyframes example {
@@ -53,4 +54,72 @@ canvas {
 .grow {
   animation-name: example;
   animation-duration: 1.3s;
+}
+
+.showdone {
+  position: absolute;
+  left: 88.7px;
+  top: 174.7px;
+  width: 234px;
+  height: 100px;
+  bottom: 10px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-color: #A9976B; */
+  outline: none;
+  border: none;
+}
+
+.secret {
+  position: absolute;
+  left: 88.7px;
+  top: 274.5px;
+  width: 234px;
+  height: 10px;
+  bottom: 10px;
+  border-radius: 4px;
+  background-color: #E3B04B;
+  /* background-color: #A9976B; */
+  border: none;
+  outline: none;
+  transform: rotatex(180deg);
+  transform-origin: top;
+  text-align: center;
+}
+
+.done {
+  position: absolute;
+  left: 224.5px;
+  top: 272px;
+  width: 98.2px;
+  height: 0px;
+  bottom: 12.5px;
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  /* background-color: #F1D6AB; */
+  background-color: #5C594F;
+  /* background-image: url("donetest.png"); */
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+@keyframes donedown {
+  0%   {height: 0px;}
+  100% {height: 26.3px;}
+}
+
+@keyframes doneup {
+  0%   {height: 26.3px;}
+  100% {height: 0px;}
+}
+.donedownclass {
+  animation-name: donedown;
+  animation-duration: 0.8s;
+}
+
+.doneupclass {
+  animation-name: doneup;
+  animation-duration: 0.7s;
 }

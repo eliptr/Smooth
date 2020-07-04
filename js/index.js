@@ -1,6 +1,7 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var hide = document.getElementById('ani');
+var done = document.getElementById('done');
 
 function onload() {
   document.addEventListener("deviceready", onDeviceReady, false);
@@ -30,8 +31,15 @@ var type;
 
 var basic;
 
+var work;
+var ab = ["25 crunches", "20 side crunches", "20 reverse crunchies", "30 sec flutter kicks"];
+var push = ["20 push ups", "12 close-grip push ups", "12 cross-body push ups"];
+var bar = ["8 reverse pull ups", "12 bar crunchies", "8 dips"];
+var whole = ["45 sec wall-handstand", "30 sec plank", "20 v-planks"];
+
 var aniheight;
 
+var downtest;
 
 var base = new Image();
 
@@ -64,6 +72,8 @@ function draw() {
   canvas.style.width = windowWidth + 'px';   /// CSS size of canvas
   canvas.style.height = windowHeight + 'px';
 
+  
+
   ctx.drawImage(base, 0, 0);
 
   if (hide.offsetHeight === 99) {
@@ -71,9 +81,27 @@ function draw() {
     typeTest()
   }
 
-  ctx.font = "lighter 65px Roboto";
+  if (document.getElementById('done').offsetHeight === 26 && downtest === true) {
+    document.getElementById('done').style.height = 26.3 + "px";
+    document.getElementById('change').style.top = 1000 + "px";
+    document.getElementById('showdone').style.top = 1000 + "px";
+  }
+
+  if (document.getElementById('done').offsetHeight === 26 && downtest === false) {
+    document.getElementById('done').style.height = 0 + "px";
+    document.getElementById('change').style.top = 732 + "px";
+    document.getElementById('showdone').style.top = 174.7 + "px";
+  }
+
+  ctx.font = "300 65px Roboto";
+  ctx.fillStyle = "#2B2B28";
   ctx.textAlign = "center";
   ctx.fillText(basic, 540, 568);
+
+  ctx.font = "lighter 55px Roboto";
+  ctx.fillStyle = "#2B2B28";
+  ctx.textAlign = "center";
+  ctx.fillText(work, 540, 632);
 
 
   requestAnimationFrame(draw, 10);
@@ -81,19 +109,24 @@ function draw() {
 
 function typeTest() {
   if (type === 1) {
-    basic = pixelRatio;
+    work = whole[ransel(whole.length)];
+    basic = "Pikachu";
   }
   if (type === 2) {
-    basic = "Garden";
+    work = ab[ransel(ab.length)];
+    basic = "Bulbasaur";
   }
   if (type === 3) {
-    basic = "Crafts";
+    work = bar[ransel(bar.length)];
+    basic = "Charmander";
   }
   if (type === 4) {
-    basic = "Photography";
+    work = push[ransel(push.length)];
+    basic = "Squirtle";
   }
   if (type === 5) {
-    basic = "Drawing";
+    work = "fdbg";
+    basic = pixelRatio;
   }
 
   localStorage.typels = type;
@@ -106,12 +139,27 @@ function change() {
 
 }
 
-function chan2() {
-  type = Math.floor(Math.random() * 5) + 1;
-  typeTest()
+
+function ransel(numb) {
+  return Math.floor(Math.random() * numb);
 }
 
+function showdonebt() {
+  console.log("almost done");
+  downtest = true;
+  document.querySelector('.done').classList.remove('donedownclass');
+  document.querySelector('.done').classList.remove('doneupclass');
+  document.querySelector('.done').offsetWidth = document.querySelector('.done').offsetWidth;
+  document.querySelector('.done').classList.add('donedownclass');
+}
 
+function downupbt() {
+  downtest = false;
+  document.querySelector('.done').classList.remove('doneupclass');
+  document.querySelector('.done').classList.remove('donedownclass');
+  document.querySelector('.done').offsetWidth = document.querySelector('.done').offsetWidth;
+  document.querySelector('.done').classList.add('doneupclass');
+}
 
 // document.getElementById('change').addEventListener('click', function () {
 //   document.querySelector('.ani').classList.remove('grow');

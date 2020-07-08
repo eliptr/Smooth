@@ -18,11 +18,11 @@ function onDeviceReady() {
 
 function onPause() {
   console.log("stop...wait a minute");
-// localStorage.typels = type;
-//  localStorage.pika1ls = pika1;
-//  localStorage.bulb1ls = bulb1;
-//  localStorage.char1ls = char1;
-//  localStorage.squi1ls = squi1;
+ localStorage.typels = type;
+  localStorage.pika1ls = pika1;
+  localStorage.bulb1ls = bulb1;
+  localStorage.char1ls = char1;
+  localStorage.squi1ls = squi1;
 }
 
 function onResume() {
@@ -57,23 +57,23 @@ base.src = "main4.png";
 function test() {
   console.log("steady");
 
-//  if (localStorage.typels) {
-//    type = Number(localStorage.typels);
-//  } else {
-//    type = Math.floor(Math.random() * 5) + 1;
-//  }
-//  console.log(type);
-//  if (localStorage.pika1ls) {
-//    pika1 = Number(localStorage.pika1ls);
-//    bulb1 = Number(localStorage.bulb1ls);
-//    char1 = Number(localStorage.char1ls);
-//    squi1 = Number(localStorage.squi1ls);
-//  } else {
-//    pika1 = 0;
-//    bulb1 = 0;
-//    char1 = 0;
-//    squi1 = 0;
-//  }
+  if (localStorage.typels) {
+    type = Number(localStorage.typels);
+  } else {
+    type = Math.floor(Math.random() * 5) + 1;
+  }
+  console.log(type);
+  if (localStorage.pika1ls) {
+    pika1 = Number(localStorage.pika1ls);
+    bulb1 = Number(localStorage.bulb1ls);
+    char1 = Number(localStorage.char1ls);
+    squi1 = Number(localStorage.squi1ls);
+  } else {
+    pika1 = 0;
+    bulb1 = 0;
+    char1 = 0;
+    squi1 = 0;
+  }
 
   windowWidth = 836.2;
   windowHeight = window.innerHeight;

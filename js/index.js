@@ -175,7 +175,6 @@ function ransel(numb) {
 function showdonebt() {
   console.log("almost done");
   downtest = true;
-  document.querySelector('.done').classList.remove('donedownclass');
   document.querySelector('.done').classList.remove('doneupclass');
   document.querySelector('.done').offsetWidth = document.querySelector('.done').offsetWidth;
   document.querySelector('.done').classList.add('donedownclass');
@@ -183,7 +182,6 @@ function showdonebt() {
 
 function downupbt() {
   downtest = false;
-  document.querySelector('.done').classList.remove('doneupclass');
   document.querySelector('.done').classList.remove('donedownclass');
   document.querySelector('.done').offsetWidth = document.querySelector('.done').offsetWidth;
   document.querySelector('.done').classList.add('doneupclass');
